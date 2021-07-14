@@ -1,0 +1,531 @@
+#wpcontent {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.tabs {
+    font-family: Roboto, Arial, sant-serif;
+}
+
+.wp-tradersoft * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000;
+}
+
+.alert-box {
+    margin: 0 0 20px;
+    padding: 12px 25px;
+    border-radius: 8px;
+}
+
+.alert-box.has-success {
+    background-color: #d2ebd6;
+    color: #0e572b;
+}
+
+.alert-box.has-error {
+    background-color: #ebd2d2;
+    color: #570e0e;
+}
+
+.tabs > input[type="radio"],
+.tabs .wrapper {
+    display: none;
+}
+
+.tabs > input[type="radio"]:checked + label {
+    background-color: #fff;
+    color: #000;
+}
+
+#tab-btn-1:checked ~ #content-1,
+#tab-btn-2:checked ~ #content-2,
+#tab-btn-3:checked ~ #content-3,
+#tab-btn-4:checked ~ #content-4 {
+    display: block;
+}
+
+.tabs > label {
+    margin-bottom: 16px;
+    margin-left: 6px;
+    padding: 10px 25px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    background-color: #23282d;
+    border: 1px solid transparent;
+    border-radius: 50px;
+    color: #eee;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+    user-select: none;
+    cursor: pointer;
+}
+
+.tabs > label:first-of-type {
+    margin-left: 0;
+}
+
+.info-box {
+    display: none !important;
+    margin-bottom: 16px;
+    line-height: 20px;
+    color: #23282d;
+}
+
+.wp-tradersoft .wrapper {
+    margin-top: 16px;
+    padding: 30px 25px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.wp-tradersoft .form-field {
+    position: relative;
+    margin-bottom: 20px;
+    min-width: 470px;
+}
+
+.wp-tradersoft .form-field label {
+    display: inline-block;
+    padding: 0 16px 4px 0;
+    width: 160px;
+    color: #545454;
+    font-size: 14px;
+    line-height: 16px;
+    cursor: default;
+}
+
+.wp-tradersoft .form-field input[type="text"],
+.wp-tradersoft .form-field select {
+    padding: 8px 20px;
+    height: 36px;
+    background: #fafafa;
+    border: 1px solid #d7d7d7;
+    border-radius: 50px;
+    font-size: 14px;
+    line-height: 16px;
+    box-shadow: none;
+}
+
+.wp-tradersoft .form-field.has-error input[type="text"],
+.wp-tradersoft .form-field.has-error select {
+    border-color: #cc3131 !important;
+}
+
+.wp-tradersoft .form-field .error-mess {
+    display: none;
+    position: absolute;
+    margin-left: 180px;
+    color: #cc3131;
+    font-size: 10px;
+    line-height: 12px;
+}
+
+.wp-tradersoft .form-field.has-error .error-mess {
+    display: block !important;
+}
+
+.wp-tradersoft .form-field input[type="text"] {
+    max-width: 358px;
+}
+
+.wp-tradersoft .form-field .example-field {
+    margin: 4px 0 0 180px;
+    max-width: 265px;
+    font-size: 10px;
+    line-height: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.select-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+.select-wrapper:after {
+    content: '';
+    position: absolute;
+    top: 13px;
+    right: 20px;
+    height: 6px;
+    width: 6px;
+    border-width: 0 0 2px 2px;
+    border-style: solid;
+    border-color: #5f6a74;
+    transform: rotate(-45deg);
+    pointer-events: none;
+}
+
+.wp-tradersoft .form-field select {
+    padding: 8px 36px 8px 20px;
+    min-width: 137px;
+    max-width: 358px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+
+.wp-tradersoft .form-field input[type="text"]:focus {
+    background: #fff;
+    border-color: #3182cc;
+    color: #000;
+    box-shadow: none;
+}
+
+input[type="submit"] {
+    width: 135px;
+    height: 36px;
+    background-color: #0073aa;
+    border: 1px solid #0073aa;
+    border-radius: 50px;
+    color: #eee;
+    box-shadow: none;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+input[type="submit"]:hover {
+    background-color: #fff;
+    color: #0073aa;
+}
+
+input[type="submit"]:focus {
+    outline: none;
+}
+
+.wp-tradersoft .form-field button {
+    width: 135px;
+    height: 36px;
+    background-color: #fff;
+    color: #0073aa;
+    border: 1px solid #0073aa;
+    border-radius: 50px;
+    box-shadow: none;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.wp-tradersoft .form-field button:hover {
+    background-color: #0073aa;
+    color: #eee;
+}
+
+.wp-tradersoft .form-field button:focus {
+    outline: none;
+}
+
+.wp-tradersoft-title {
+    margin-top: 16px;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #545454;
+    font-size: 16px;
+    line-height: 19px;
+    border-bottom: 1px solid rgba(215, 215, 215, 0.3);
+}
+
+.m-t-0 {
+    margin-top: 0 !important;
+}
+
+.m-b-0 {
+    margin-bottom: 0 !important;
+}
+
+.m-t-30 {
+    margin-top: 30px !important;
+}
+
+.m-t--16 {
+    margin-top: -16px !important;
+}
+
+.m-b-26 {
+    margin-bottom: 26px !important;
+}
+
+.m-b-30 {
+    margin-bottom: 30px !important;
+}
+
+hr {
+    margin-bottom: 30px;
+    height: 1px;
+    background-color: #d7d7d7;
+    border: none;
+    opacity: 0.3;
+}
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.col-6 {
+    padding-right: 8px;
+    padding-left: 8px;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 50%;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.checkbox-switcher {
+    position: relative;
+    display: inline-flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.checkbox-switcher input {
+    display: none;
+}
+
+.checkbox-switcher input[type=checkbox] {
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.checkbox-switcher .switch-title {
+    width: 38px;
+    color: #545454;
+}
+
+.checkbox-switcher input:checked + .switch-title:before {
+    content: "Yes";
+}
+
+.checkbox-switcher input + .switch-title:before {
+    content: "No";
+}
+
+.checkbox-switcher input:checked ~ .switch-selection:before {
+    background-color: #43ad61;
+}
+
+.checkbox-switcher .switch-selection {
+    position: relative;
+    margin: 0;
+    width: 43px !important;
+    height: 24px;
+    background-color: #fafafa;
+    border: 1px solid #d7d7d7;
+    -webkit-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    cursor: pointer !important;
+}
+
+.checkbox-switcher input:checked ~ .switch-selection:before {
+    left: -webkit-calc(100% - 20px);
+    left: calc(100% - 20px);
+}
+
+.checkbox-switcher .switch-selection:before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 20px;
+    height: 20px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background-color: #aaa;
+    -webkit-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    cursor: pointer;
+}
+
+.info-text {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    color: #545454;
+    font-weight: 500;
+}
+
+.table-row {
+    position: relative;
+    left: -1%;
+    width: 102%;
+    display: flex;
+    color: #000;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.table-row:not(.table-head):hover [class*="shortcodes-"],
+.table-row:not(.table-head):hover .table-empty {
+    background-color: #e1f5ff;
+}
+
+.table-head [class*="shortcodes-"] {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    color: #545454;
+    line-height: 16px;
+}
+
+.table-empty {
+    width: 1%;
+}
+
+.shortcodes-name {
+    padding: 10px 16px 10px 0;
+    width: 20%;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: rgba(215, 215, 215, 0.3);
+}
+
+.shortcodes-description {
+    padding: 10px 8px 10px 30px;
+    width: 49%;
+    border-width: 0 1px 1px;
+    border-style: solid;
+    border-color: rgba(215, 215, 215, 0.3);
+}
+
+.table-head .shortcodes-description {
+    border-right-width: 0px;
+    border-left-width: 0px;
+}
+
+.shortcodes-example {
+    padding: 10px 0 10px 20px;
+    width: 29%;
+    border-width: 0 0 1px;
+    border-style: solid;
+    border-color: rgba(215, 215, 215, 0.3);
+}
+
+@media screen and (max-width: 1400px) {
+    .wp-tradersoft .form-field input[type="text"],
+    .wp-tradersoft .form-field select {
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .col-6 {
+        -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .table-row:not(.table-head) {
+        flex-direction: column;
+    }
+
+    .table-row:nth-child(2n+1) {
+        background-color: #f8f8f8;
+    }
+
+    .table-head [class*="shortcodes-"] {
+        border-color: rgba(215, 215, 215, 1);
+    }
+
+    .table-empty {
+        display: none;
+    }
+
+    .shortcodes-name,
+    .shortcodes-description,
+    .shortcodes-example {
+        padding: 10px;
+        width: 100%;
+        border-color: rgba(215, 215, 215, 0.3);
+    }
+
+    .shortcodes-name {
+        font-weight: 600;
+    }
+
+    .shortcodes-description {
+        padding-right: 20%;
+        padding-left: 20%;
+        border-width: 0 0 1px;
+        text-align: center;
+    }
+
+    .shortcodes-example {
+        border-color: rgba(215, 215, 215, 1);
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 782px) {
+    #wpcontent {
+        padding-right: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .tabs > label {
+        margin-right: 4px !important;
+        margin-left: 4px !important;
+        width: calc(50% - 10px);
+    }
+
+    .wp-tradersoft .form-field input[type="text"],
+    .wp-tradersoft .form-field select {
+        max-width: 100% !important;
+        width: 100%;
+    }
+
+    .wp-tradersoft .form-field label {
+        padding: 0 0 8px 0;
+    }
+
+    .wp-tradersoft .form-field .example-field {
+        max-width: calc(100% - 40px);
+    }
+
+    .wp-tradersoft .form-field {
+        min-width: auto;
+    }
+
+    .wp-tradersoft .form-field label:not(.small-label) {
+        width: 100%;
+    }
+
+    .wp-tradersoft .form-field .example-field,
+    .wp-tradersoft .form-field.has-error .error-mess {
+        margin-left: 20px;
+    }
+
+    .shortcodes-description {
+        padding-right: 10%;
+        padding-left: 10%;
+    }
+}

@@ -1,0 +1,400 @@
+.active-form-title {
+    all: initial;
+    font: bold 24px arial, sans-serif;
+    margin-bottom: 24px;
+    text-align: center;
+    display: block;
+}
+
+body .ts-form-element {
+    all: initial;
+    max-width: 700px;
+    margin: auto;
+    display: flex;
+    background: #e6e6e6;
+    padding: 16px;
+    font-family: arial, sans-serif;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body .ts-form-element .form-blocks {
+    all: initial;
+    flex: 1;
+    margin-right: 16px;
+}
+
+body .ts-form-element .form-blocks:last-of-type {
+    margin-right: 0;
+}
+
+body .ts-form-element .form-item-block {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #000;
+    padding-right: 20px;
+    position: relative;
+}
+
+body .ts-form-element .form-item-block:only-child {
+    margin-bottom: 0;
+    padding-right: 0;
+    border-bottom: 0;
+}
+
+body .ts-form-element .remove-block {
+    position: absolute;
+    top: 50%;
+    margin-top: -4px;
+    right: 0;
+    font-family: sans-serif;
+    color: #c00;
+    font-size: 16px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+body .ts-form-element .form-group {
+    all: initial;
+    display: flex;
+    align-items: start;
+    margin-bottom: 16px;
+}
+
+body .ts-form-element .form-group:last-of-type {
+    margin-bottom: 0;
+}
+
+body .ts-form-element .form-row {
+    all: initial;
+    width: 100%;
+    margin-right: 16px;
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+}
+
+body .ts-form-element .form-row:last-of-type {
+    margin-right: 0;
+}
+
+body .ts-form-element .form-row.field-reasons {
+    display: none;
+}
+
+body .ts-form-element .form-row label {
+    all: initial;
+    display: block;
+    font: 14px/1.2 arial, sans-serif;
+    padding-bottom: 7px;
+    color: #000;
+    word-break: break-word;
+    width: 100%;
+}
+
+body .ts-form-element input[type="text"],
+body .ts-form-element input[type="password"],
+body .ts-form-element input[type="email"],
+body .ts-form-element input[type="number"],
+body .ts-form-element select {
+    all: initial;
+    position: relative;
+    border: 1px solid #000;
+    width: 100%;
+    height: 36px;
+    color: #000;
+    padding: 0 16px;
+    font: 14px arial, sans-serif;
+    background-color: #FFF;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body .ts-form-element select {
+    line-height: 34px;
+    padding-right: 26px;
+    background: #ffffff url(../img/select-arrow.png) 95% 50% no-repeat;
+}
+
+body .ts-form-element .form-row input + input, body .ts-form-element .form-row select + select {
+    margin-left: 8px;
+}
+
+body .ts-form-element input[type="text"][disabled],
+body .ts-form-element input[type="password"][disabled],
+body .ts-form-element input[type="email"][disabled],
+body .ts-form-element input[type="number"][disabled],
+body .ts-form-element input[type="submit"][disabled],
+body .ts-form-element input[type="submit"][disabled]:hover,
+body .ts-form-element select[disabled] {
+    background: #c3c3c3;
+    border-color: #999;
+    color: #999;
+    opacity: 0.8;
+    cursor: default;
+}
+
+body .ts-form-element .form-row input[type="checkbox"][disabled] + label {
+    cursor: default;
+    color: #999;
+}
+
+body .ts-form-element input[type="checkbox"][disabled] + label:before {
+    background: #c3c3c3;
+    opacity: 0.8;
+}
+
+body .ts-form-element input[type="text"]:focus,
+body .ts-form-element input[type="password"]:focus,
+body .ts-form-element input[type="email"]:focus,
+body .ts-form-element input[type="number"]:focus,
+body .ts-form-element input[type="submit"]:focus,
+body .ts-form-element select:focus {
+    border-color: #72b1e7;
+}
+
+body .ts-form-element .field-type-doublePhone input {
+    flex: 1;
+    min-width: 0;
+}
+
+body .ts-form-element .field-type-doublePhone input + input {
+    flex: 3;
+    min-width: 0;
+}
+
+body .ts-form-element .field-type-doublePhone input + label {
+    margin-top: 16px;
+}
+
+body .ts-form-element input[type="submit"],
+body .ts-form-element button {
+    all: initial;
+    height: 40px;
+    background: #000;
+    border: 1px solid #000;
+    color: #fff;
+    font: 14px arial, sans-serif;
+    padding: 0 24px;
+    text-align: center;
+    word-break: break-word;
+    cursor: pointer;
+}
+
+body .ts-form-element input[type="submit"]:hover {
+    background: transparent;
+    color: #000;
+}
+
+body .ts-form-element .control-label {
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+body .ts-form-element .control-label:before {
+    all: initial;
+}
+
+body .ts-form-element input[type='checkbox'],
+body .ts-form-element input[type='radio'] {
+    position: absolute;
+    left: -9999px;
+}
+
+body .ts-form-element .form-row input[type='checkbox'] + .control-label,
+body .ts-form-element .form-row input[type='radio'] + label {
+    margin: 0;
+    cursor: pointer;
+    display: table;
+    width: auto;
+    position: relative;
+    padding-left: 26px;
+    min-height: 10px;
+}
+
+body .ts-form-element input[type='checkbox'] + .control-label:before {
+    all: initial;
+    content: "";
+    height: 16px;
+    width: 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+body .ts-form-element input[type='checkbox'] + .control-label:after {
+    all: initial;
+    content: '';
+    position: absolute;
+    height: 7px;
+    width: 12px;
+    top: 2px;
+    left: 2px;
+    border-bottom: solid 2px #000;
+    border-left: solid 2px #000;
+    opacity: 0;
+    transform: rotate(-45deg) scale(.8);
+    cursor: pointer;
+}
+
+body .ts-form-element input[type='radio'] + label:before {
+    all: initial;
+    content: "";
+    height: 16px;
+    width: 16px;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    border: 1px solid transparent;
+    cursor: pointer;
+}
+
+body .ts-form-element input[type='radio'] + label:after {
+    all: initial;
+    content: '';
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    top: 5px;
+    left: 5px;
+    background: #000;
+    border-radius: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+body .ts-form-element input[type='checkbox']:checked + .control-label:after,
+body .ts-form-element input[type='radio']:checked + label:after {
+    opacity: 1;
+}
+
+body .ts-form-element .control-label a {
+    all: inherit;
+    text-decoration: underline;
+    display: inline-block;
+    padding: 0;
+}
+
+body .ts-form-element .control-label a:hover {
+    text-decoration: none;
+}
+
+body .ts-form-element .has-error input, body .ts-form-element .has-error select, body .ts-form-element .has-error input[type='checkbox'] + .control-label:before {
+    border: 1px solid #ff0000;
+}
+
+body .ts-form-element .error.error-text-js {
+    all: initial;
+    position: relative;
+    background: #ff0000;
+    padding: 0 4px;
+    color: #fff;
+    display: table;
+}
+
+body .ts-form-element input[type='checkbox'] ~ .error.error-text-js {
+    max-width: 100%;
+}
+
+body .ts-form-element .error.error-text-js:empty {
+    display: none;
+}
+
+body .system-message-block {
+    all: initial;
+    margin: 16px 0;
+    text-align: center;
+}
+
+body .system-message-block p {
+    font: 16px/1.2 arial, sans-serif;
+}
+
+body .system-message-block .system-message-warning {
+    color: #da4444;
+}
+
+body .system-message-block .system-message-success {
+    color: #44da44;
+}
+
+body .ts-form-element .tooltip-target {
+    all: initial;
+    position: absolute;
+    background-color: #FFFFFF;
+    left: 0;
+    padding: 4px 8px;
+    bottom: calc(100% + 8px);
+    z-index: 10;
+    font: 12px arial, sans-serif;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+body .ts-form-element .tooltip-target:before {
+    all: initial;
+    content: "";
+    top: 100%;
+    left: 4px;
+    border: solid transparent;
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-top-color: #fff;
+    border-width: 5px;
+}
+
+body .ts-form-element .reasons {
+    margin-left: 10px;
+}
+
+body .ts-form-element .radio-item {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+body .ts-form-element .element-comment {
+    margin: 5px 0 0;
+    font-size: 0.8em;
+    position: relative;
+}
+
+body .ts-form-element .block-duplicate {
+    text-decoration: underline;
+    color: #272B43;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+body .form-field-description {
+    font-size: 0.8em;
+    flex: 100%;
+}
+
+[lang="ar"] body .ts-form-element input[type='checkbox'], [lang="ar"] body .ts-form-element input[type='radio'] {
+    left: auto;
+    right: -9999px;
+}
+
+@media (max-width: 600px) {
+    body .ts-form-element {
+        flex-direction: column;
+    }
+
+    body .ts-form-element .form-blocks {
+        margin-bottom: 16px;
+        margin-right: 0;
+
+    }
+
+    body .ts-form-element .form-blocks:last-of-type {
+        margin-bottom: 0;
+    }
+}

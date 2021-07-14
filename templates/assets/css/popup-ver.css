@@ -1,0 +1,124 @@
+/* Pop UP */
+.ver-popup-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.box-modal-wrapper {
+	position: relative;
+	max-width: 800px;
+	min-width: 400px;
+	background-color: #fff;
+	padding: 32px 44px;
+}
+
+.box-modal-title {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
+.box-modal-title.success {
+	color: #0fab0f;
+}
+
+.box-modal-title.error {
+	color: #c42424;
+}
+
+.box-modal-description {
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 16px;
+	color:#000;
+}
+
+.buttons-wrap {
+	display: block;
+	margin: auto;
+	text-align: center;
+	background: none !important;
+}
+
+.ver-popup-close {
+	display: block;
+	width: 35px;
+	padding: 0;
+	height: 35px;
+	background-color: transparent;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	border: none;
+	border-radius: 50px;
+	z-index: 5;
+	cursor: pointer;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.ver-popup-close:hover {
+	opacity: 0.6;
+}
+
+.ver-popup-close svg {
+	width: 35px;
+	height: 35px;
+}
+
+
+/*------------------------------------------------------------------------------
+                      Account verification
+------------------------------------------------------------------------------*/
+.buttons-wrap .upload-button-wrap {
+	position: relative;
+	display: inline-block;
+	font-weight: bold;
+	letter-spacing: 1px;
+	cursor: pointer;
+	color: #FFF;
+	font-size: 14px;
+	text-transform: uppercase;
+	border: 2px solid #6f6f6f;
+	background-color: #6f6f6f;
+	height: 50px;
+	line-height: 50px;
+	min-width: 182px;
+	padding: 0 10px;
+	width: auto;
+	text-align: center;
+	transition: all 0.2s ease-in-out;
+}
+.buttons-wrap .upload-button-wrap:hover,
+.buttons-wrap .upload-button-wrap:active {
+	background-color: #353942;
+}
+
+.buttons-wrap .upload-button-wrap a {
+    color: #fff;
+    text-decoration: none;
+    line-height: 50px;
+	background: none;
+	border: 0;
+}
+.buttons-wrap .upload-button-wrap:hover a,
+.buttons-wrap .upload-button-wrap:active a {
+    color: #FFF;
+}
+
+.buttons-wrap .upload-button-wrap input[type="file"] {
+	cursor: pointer;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}

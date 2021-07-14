@@ -1,0 +1,116 @@
+.tradeTabs {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.tradeTabs__btn {
+    background: none;
+    border: none;
+    font-size: 12px;
+    color: #000000;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin: 0 30px;
+    outline: none;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.tradeTabs__btn:hover {
+    color: #3b59f3;
+}
+.tradeTabs__btn.active {
+    color: #3b59f3;
+}
+.tradeItem {
+    display: -webkit-inline-box;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+    padding: 17px 20px 17px 19px;
+    margin-bottom: 10px;
+    -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.tradeItem:hover {
+    background-color: #fcf6e8;
+}
+.tradeItem:last-child {
+    -webkit-box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.3);
+}
+.tradeItem > div {
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+.tradeItem__title {
+    min-width: 60px;
+    font-size: 12px;
+    color: #282828;
+    font-weight: 700;
+    text-transform: uppercase;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+}
+.tradeItem__text {
+    font-size: 9px;
+    color: #c1c1c1;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-right: 6px;
+}
+.tradeItem__percent {
+    font-size: 12px;
+    color: #282828;
+}
+.tradeItem__sellBlock .tradeItem__sum {
+    font-size: 12px;
+    color: #f34444;
+}
+.tradeItem__buyBlock .tradeItem__sum {
+    font-size: 12px;
+    color: #1cb36a;
+}
+.tradeItem__btn {
+    font-size: 9px;
+    color: #1cb36a;
+    padding: 7px 18px 6px 19px;
+    border: 2px solid #1cb36a;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: border-color .1s ease-out, color .3s ease-out, background .3s ease-out;
+    transition: border-color .1s ease-out, color .3s ease-out, background .3s ease-out;
+}
+.tradeItem__btn.up {
+    color: #1cb36a;
+    border: 2px solid #1cb36a;
+}
+.tradeItem__btn.down {
+    color: #f34444;
+    border: 2px solid #f34444;
+}
+.tradeItem__btn:hover {
+    color: #ffffff;
+    background: #febe29;
+    border-color: #febe29;
+}
+.tradeItem__wrapper {
+    display: none;
+}
+.tradeItem__wrapper:first-child {
+    display: block;
+}

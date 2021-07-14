@@ -1,0 +1,1 @@
+<iframe src="<?php echo \tradersoft\helpers\Platform::getURL(\tradersoft\helpers\Platform::URL_STAT_CFD); ?>"></iframe>

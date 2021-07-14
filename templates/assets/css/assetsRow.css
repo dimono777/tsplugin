@@ -1,0 +1,82 @@
+#tradestrip {
+    overflow: hidden;
+}
+
+#tradestrip .item {
+    min-width: 250px;
+    height: 80px;
+    display: inline-flex;
+    justify-content:center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding:0 60px 0 40px;
+    position: relative;
+}
+#tradestrip .item:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 1px;
+    height: 15px;
+    margin: auto;
+    background-color: rgba(0,0,0,.1);
+}
+
+#tradestrip .item span {
+    display:block;
+    color: #909090;
+}
+
+#tradestrip .item .assetName {
+    font-weight:700;
+    font-size: 13px;
+}
+
+#tradestrip .assetSellRate {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 500;
+    display: block;
+}
+
+#tradestrip .assetPercent {
+    font-size: 18px;
+    line-height:20px;
+    font-weight: 400;
+    position:absolute;
+    right:60px;
+}
+
+#tradestrip .assetPercent.up {
+    color: #39c44d;
+}
+
+#tradestrip .assetPercent.down {
+    color: #f55b5b;
+}
+
+#tradestrip .assetPercent.up:before {
+    content: '';
+    height: 0;
+    width: 0;
+    border-bottom: 5px solid #39c44d;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-top: 8px;
+    margin-right: 7px;
+    float: left;
+}
+
+#tradestrip .assetPercent.down:before {
+    content: '';
+    height: 0;
+    width: 0;
+    border-top: 5px solid #f55b5b;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    margin-top: 8px;
+    margin-right: 7px;
+    float: left;
+}

@@ -1,0 +1,662 @@
+/*------------------------------------------------------------------------------
+                      Economic_Calendar
+------------------------------------------------------------------------------*/
+.section-calendar {
+    padding:60px 0;
+}
+.section-calendar .days-list {
+    border-bottom:1px solid #dddddd;
+}
+.section-calendar .days-list:after {
+    content:'';
+    display:block;
+    width:100%;
+    clear:both;
+}
+.section-calendar .days-list li {
+    cursor: pointer;
+    float:left;
+    width:12.7%;
+}
+.section-calendar .days-list li a {
+    display:block;
+    line-height: 48px;
+    font-size: 16px;
+    font-weight: 300;
+    color:#000000;  
+    text-align:center;
+    position:relative;
+    top:2px;
+    border-bottom:1px solid transparent;
+}
+.section-calendar .days-list li.active a {
+    font-weight:500;
+    border-bottom-color:#fad11d;
+}
+.section-calendar .days-list li:hover a {
+    font-weight:500;
+}
+.section-calendar .days-list .settings-icon {
+    float:right;
+    width:60px;
+}
+.section-calendar .days-list .settings-icon a {
+    top: 0;
+    padding-right:20px;
+    /*background: #ffffff url(../img/arr_g.png) center right 15px no-repeat;*/
+}
+.section-calendar .days-list .settings-icon a:after {
+    content:'';
+    display:inline-block;
+    vertical-align:middle;
+    height:48px;
+}
+.section-calendar .days-list .settings-icon img {
+    display:inline-block;
+    vertical-align:middle;
+}
+.section-calendar .calendar-filter .top-part {
+    border-bottom: 1px solid #ccc;
+    padding: 15px;
+    position: relative;
+}
+.section-calendar .time-block {
+    position:relative;
+    display:inline-block;
+    vertical-align:middle;
+}
+.section-calendar .calendar-filter .top-part .timer,.section-calendar .calendar-filter .top-part .country {
+    display:inline-block;
+    vertical-align:middle;
+    padding:5px;
+    font-size: 16px;
+    font-weight: 300;
+}
+.section-calendar .calendar-filter .top-part .icon-expand {
+    display:inline-block;
+    vertical-align:middle;
+    padding:5px;
+    cursor:pointer;
+}
+.section-calendar .calendar-filter .top-part .icon-expand svg {
+    width:20px;
+}
+.section-calendar .calendar-filter .select {
+    overflow: auto;
+    position:absolute;
+    height:200px;
+    background:#fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index:20;
+    min-width:100%;
+}
+.section-calendar .calendar-filter .select .item {
+    padding:5px 10px;
+    font-size: 14px;
+    font-weight: 300;
+}
+.section-calendar .calendar-filter .select .item:hover {
+    background:rgba(250,209,29,0.3);
+    cursor:pointer;
+}
+.section-calendar .calendar-filter .top-part .star {
+    display: inline-block;
+    position: relative;
+    vertical-align:middle;
+    padding: 8px;
+    cursor: pointer;
+    line-height: 1;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+    background:#fff;
+}
+.section-calendar .calendar-filter .top-part .star.inactive {
+    box-shadow:none;
+}
+.section-calendar .calendar-filter .top-part .star svg {
+    width:25px;
+}
+.section-calendar .calendar-filter .btm-part {
+    padding:15px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+
+.switch {
+    float:right;
+    margin-top:3px;
+}
+.switch input[type="checkbox"] + label {
+    padding: 2px;
+    width: 44px;
+    height: 14px;
+    background-color: #dddddd;
+    border-radius: 20px;
+    display: block;
+    position: relative;
+    cursor: pointer;
+}
+.switch input[type="checkbox"] + label:before, .switch input[type="checkbox"] + label:after {
+    display: block;
+    position: absolute;
+    content: "";
+}
+.switch input[type="checkbox"] + label:before {
+    right: 1px;
+    left:1px;
+    top:1px;
+    bottom:1px;
+    background-color: #f1f1f1;
+    border-radius: 20px;
+    transition: background 0.4s;
+    margin:0;
+    width:auto;
+    height:auto;
+    background-image:none;
+}
+.switch input[type="checkbox"] + label:after {
+    width: 18px;
+    left:1px;
+    top:-2px;
+    bottom:-2px;
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: margin 0.4s;
+}
+.switch input[type="checkbox"]:checked + label:before {
+    background-color: #fad11d;
+}
+.switch input[type="checkbox"]:checked + label:after {
+    margin-left: 26px;
+}
+
+.filter-countries {
+    display:inline-block;
+}
+.filter-countries .item {
+    display:inline-block;
+    margin-right:10px;
+}
+.filter-countries .item .checkbox {
+   display:inline-block;
+   vertical-align:middle; 
+   height: 21px;
+}
+.filter-countries .item .checkbox label:before {
+    margin:2px 0 0;
+}
+.filter-countries .item .currency-name {
+    display:inline-block;
+    vertical-align:middle; 
+    font-size: 14px;
+    font-weight: 300;
+    color: #000000;
+}
+
+
+
+.flag-icon { 
+    background: url(../images/flag-sprite.png) no-repeat; 
+    background-size:24px auto;
+    position:relative;
+    display:inline-block;
+    vertical-align:middle;
+    width: 24px;
+    height: 18px;
+}
+.flag-icon-ad {  background-position: 0 0; }
+.flag-icon-ae {  background-position: 0 -19px; }
+.flag-icon-af {  background-position: 0 -38px; }
+.flag-icon-ag {  background-position: 0 -57px; }
+.flag-icon-ai {  background-position: 0 -76px; }
+.flag-icon-al {  background-position: 0 -95px; }
+.flag-icon-am {  background-position: 0 -114px; }
+.flag-icon-ao {  background-position: 0 -133px; }
+.flag-icon-aq {  background-position: 0 -152px; }
+.flag-icon-ar {  background-position: 0 -171px; }
+.flag-icon-as {  background-position: 0 -190px; }
+.flag-icon-at {  background-position: 0 -209px; }
+.flag-icon-aud {  background-position: 0 -228px; }
+.flag-icon-aw {  background-position: 0 -247px; }
+.flag-icon-ax {  background-position: 0 -266px; }
+.flag-icon-az {  background-position: 0 -285px; }
+.flag-icon-ba {  background-position: 0 -304px; }
+.flag-icon-bb {  background-position: 0 -323px; }
+.flag-icon-bd {  background-position: 0 -342px; }
+.flag-icon-be {  background-position: 0 -361px; }
+.flag-icon-bf {  background-position: 0 -380px; }
+.flag-icon-bg {  background-position: 0 -399px; }
+.flag-icon-bh {  background-position: 0 -418px; }
+.flag-icon-bi {  background-position: 0 -437px; }
+.flag-icon-bj {  background-position: 0 -456px; }
+.flag-icon-bl {  background-position: 0 -475px; }
+.flag-icon-bm {  background-position: 0 -494px; }
+.flag-icon-bn {  background-position: 0 -513px; }
+.flag-icon-bo {  background-position: 0 -532px; }
+.flag-icon-bq {  background-position: 0 -551px; }
+.flag-icon-br {  background-position: 0 -570px; }
+.flag-icon-bs {  background-position: 0 -589px; }
+.flag-icon-bt {  background-position: 0 -608px; }
+.flag-icon-bv {  background-position: 0 -627px; }
+.flag-icon-bw {  background-position: 0 -646px; }
+.flag-icon-by {  background-position: 0 -665px; }
+.flag-icon-bz {  background-position: 0 -684px; }
+.flag-icon-cad {  background-position: 0 -703px; }
+.flag-icon-cc {  background-position: 0 -722px; }
+.flag-icon-cd {  background-position: 0 -741px; }
+.flag-icon-cf {  background-position: 0 -760px; }
+.flag-icon-cg {  background-position: 0 -779px; }
+.flag-icon-chf {  background-position: 0 -798px; }
+.flag-icon-ci {  background-position: 0 -817px; }
+.flag-icon-ck {  background-position: 0 -836px; }
+.flag-icon-cl {  background-position: 0 -855px; }
+.flag-icon-cm {  background-position: 0 -874px; }
+.flag-icon-cny {  background-position: 0 -893px; }
+.flag-icon-co {  background-position: 0 -912px; }
+.flag-icon-cr {  background-position: 0 -931px; }
+.flag-icon-cu {  background-position: 0 -950px; }
+.flag-icon-cv {  background-position: 0 -969px; }
+.flag-icon-cw {  background-position: 0 -988px; }
+.flag-icon-cx {  background-position: 0 -1007px; }
+.flag-icon-cy {  background-position: 0 -1026px; }
+.flag-icon-cz {  background-position: 0 -1045px; }
+.flag-icon-de {  background-position: 0 -1064px; }
+.flag-icon-dj {  background-position: 0 -1083px; }
+.flag-icon-dk {  background-position: 0 -1102px; }
+.flag-icon-dm {  background-position: 0 -1121px; }
+.flag-icon-do {  background-position: 0 -1140px; }
+.flag-icon-dz {  background-position: 0 -1159px; }
+.flag-icon-ec {  background-position: 0 -1178px; }
+.flag-icon-ee {  background-position: 0 -1197px; }
+.flag-icon-eg {  background-position: 0 -1216px; }
+.flag-icon-eh {  background-position: 0 -1235px; }
+.flag-icon-er {  background-position: 0 -1254px; }
+.flag-icon-es {  background-position: 0 -1273px; }
+.flag-icon-et {  background-position: 0 -1292px; }
+.flag-icon-eur {  background-position: 0 -1311px; }
+.flag-icon-fi {  background-position: 0 -1330px; }
+.flag-icon-fj {  background-position: 0 -1349px; }
+.flag-icon-fk {  background-position: 0 -1368px; }
+.flag-icon-fm {  background-position: 0 -1387px; }
+.flag-icon-fo {  background-position: 0 -1406px; }
+.flag-icon-fr {  background-position: 0 -1425px; }
+.flag-icon-ga {  background-position: 0 -1444px; }
+.flag-icon-gbp {  background-position: 0 -1463px; }
+.flag-icon-gd {  background-position: 0 -1482px; }
+.flag-icon-ge {  background-position: 0 -1501px; }
+.flag-icon-gf {  background-position: 0 -1520px; }
+.flag-icon-gg {  background-position: 0 -1539px; }
+.flag-icon-gh {  background-position: 0 -1558px; }
+.flag-icon-gi {  background-position: 0 -1577px; }
+.flag-icon-gl {  background-position: 0 -1596px; }
+.flag-icon-gm {  background-position: 0 -1615px; }
+.flag-icon-gn {  background-position: 0 -1634px; }
+.flag-icon-gp {  background-position: 0 -1653px; }
+.flag-icon-gq {  background-position: 0 -1672px; }
+.flag-icon-gr {  background-position: 0 -1691px; }
+.flag-icon-gs {  background-position: 0 -1710px; }
+.flag-icon-gt {  background-position: 0 -1729px; }
+.flag-icon-gu {  background-position: 0 -1748px; }
+.flag-icon-gw {  background-position: 0 -1767px; }
+.flag-icon-gy {  background-position: 0 -1786px; }
+.flag-icon-hk {  background-position: 0 -1805px; }
+.flag-icon-hm {  background-position: 0 -1824px; }
+.flag-icon-hn {  background-position: 0 -1843px; }
+.flag-icon-hr {  background-position: 0 -1862px; }
+.flag-icon-ht {  background-position: 0 -1881px; }
+.flag-icon-hu {  background-position: 0 -1900px; }
+.flag-icon-id {  background-position: 0 -1919px; }
+.flag-icon-ie {  background-position: 0 -1938px; }
+.flag-icon-il {  background-position: 0 -1957px; }
+.flag-icon-im {  background-position: 0 -1976px; }
+.flag-icon-in {  background-position: 0 -1995px; }
+.flag-icon-io {  background-position: 0 -2014px; }
+.flag-icon-iq {  background-position: 0 -2033px; }
+.flag-icon-ir {  background-position: 0 -2052px; }
+.flag-icon-is {  background-position: 0 -2071px; }
+.flag-icon-it {  background-position: 0 -2090px; }
+.flag-icon-je {  background-position: 0 -2109px; }
+.flag-icon-jm {  background-position: 0 -2128px; }
+.flag-icon-jo {  background-position: 0 -2147px; }
+.flag-icon-jpy {  background-position: 0 -2166px; }
+.flag-icon-ke {  background-position: 0 -2185px; }
+.flag-icon-kg {  background-position: 0 -2204px; }
+.flag-icon-kh {  background-position: 0 -2223px; }
+.flag-icon-ki {  background-position: 0 -2242px; }
+.flag-icon-km {  background-position: 0 -2261px; }
+.flag-icon-kn {  background-position: 0 -2280px; }
+.flag-icon-kp {  background-position: 0 -2299px; }
+.flag-icon-kr {  background-position: 0 -2318px; }
+.flag-icon-kw {  background-position: 0 -2337px; }
+.flag-icon-ky {  background-position: 0 -2356px; }
+.flag-icon-kz {  background-position: 0 -2375px; }
+.flag-icon-la {  background-position: 0 -2394px; }
+.flag-icon-lb {  background-position: 0 -2413px; }
+.flag-icon-lc {  background-position: 0 -2432px; }
+.flag-icon-li {  background-position: 0 -2451px; }
+.flag-icon-lk {  background-position: 0 -2470px; }
+.flag-icon-lr {  background-position: 0 -2489px; }
+.flag-icon-ls {  background-position: 0 -2508px; }
+.flag-icon-lt {  background-position: 0 -2527px; }
+.flag-icon-lu {  background-position: 0 -2546px; }
+.flag-icon-lv {  background-position: 0 -2565px; }
+.flag-icon-ly {  background-position: 0 -2584px; }
+.flag-icon-ma {  background-position: 0 -2603px; }
+.flag-icon-mc {  background-position: 0 -2622px; }
+.flag-icon-md {  background-position: 0 -2641px; }
+.flag-icon-me {  background-position: 0 -2660px; }
+.flag-icon-mf {  background-position: 0 -2679px; }
+.flag-icon-mg {  background-position: 0 -2698px; }
+.flag-icon-mh {  background-position: 0 -2717px; }
+.flag-icon-mk {  background-position: 0 -2736px; }
+.flag-icon-ml {  background-position: 0 -2755px; }
+.flag-icon-mm {  background-position: 0 -2774px; }
+.flag-icon-mn {  background-position: 0 -2793px; }
+.flag-icon-mo {  background-position: 0 -2812px; }
+.flag-icon-mp {  background-position: 0 -2831px; }
+.flag-icon-mq {  background-position: 0 -2850px; }
+.flag-icon-mr {  background-position: 0 -2869px; }
+.flag-icon-ms {  background-position: 0 -2888px; }
+.flag-icon-mt {  background-position: 0 -2907px; }
+.flag-icon-mu {  background-position: 0 -2926px; }
+.flag-icon-mv {  background-position: 0 -2945px; }
+.flag-icon-mw {  background-position: 0 -2964px; }
+.flag-icon-mx {  background-position: 0 -2983px; }
+.flag-icon-my {  background-position: 0 -3002px; }
+.flag-icon-mz {  background-position: 0 -3021px; }
+.flag-icon-na {  background-position: 0 -3040px; }
+.flag-icon-nc {  background-position: 0 -3059px; }
+.flag-icon-ne {  background-position: 0 -3078px; }
+.flag-icon-nf {  background-position: 0 -3097px; }
+.flag-icon-ng {  background-position: 0 -3116px; }
+.flag-icon-ni {  background-position: 0 -3135px; }
+.flag-icon-nl {  background-position: 0 -3154px; }
+.flag-icon-no {  background-position: 0 -3173px; }
+.flag-icon-np {  background-position: 0 -3192px; }
+.flag-icon-nr {  background-position: 0 -3211px; }
+.flag-icon-nu {  background-position: 0 -3230px; }
+.flag-icon-nzd {  background-position: 0 -3249px; }
+.flag-icon-om {  background-position: 0 -3268px; }
+.flag-icon-pa {  background-position: 0 -3287px; }
+.flag-icon-pe {  background-position: 0 -3306px; }
+.flag-icon-pf {  background-position: 0 -3325px; }
+.flag-icon-pg {  background-position: 0 -3344px; }
+.flag-icon-ph {  background-position: 0 -3363px; }
+.flag-icon-pk {  background-position: 0 -3382px; }
+.flag-icon-pl {  background-position: 0 -3401px; }
+.flag-icon-pm {  background-position: 0 -3420px; }
+.flag-icon-pn {  background-position: 0 -3439px; }
+.flag-icon-pr {  background-position: 0 -3458px; }
+.flag-icon-ps {  background-position: 0 -3477px; }
+.flag-icon-pt {  background-position: 0 -3496px; }
+.flag-icon-pw {  background-position: 0 -3515px; }
+.flag-icon-py {  background-position: 0 -3534px; }
+.flag-icon-qa {  background-position: 0 -3553px; }
+.flag-icon-re {  background-position: 0 -3572px; }
+.flag-icon-ro {  background-position: 0 -3591px; }
+.flag-icon-rs {  background-position: 0 -3610px; }
+.flag-icon-ru {  background-position: 0 -3629px; }
+.flag-icon-rw {  background-position: 0 -3648px; }
+.flag-icon-sa {  background-position: 0 -3667px; }
+.flag-icon-sb {  background-position: 0 -3686px; }
+.flag-icon-sc {  background-position: 0 -3705px; }
+.flag-icon-sd {  background-position: 0 -3724px; }
+.flag-icon-se {  background-position: 0 -3743px; }
+.flag-icon-sg {  background-position: 0 -3762px; }
+.flag-icon-sh {  background-position: 0 -3781px; }
+.flag-icon-si {  background-position: 0 -3800px; }
+.flag-icon-sj {  background-position: 0 -3819px; }
+.flag-icon-sk {  background-position: 0 -3838px; }
+.flag-icon-sl {  background-position: 0 -3857px; }
+.flag-icon-sm {  background-position: 0 -3876px; }
+.flag-icon-sn {  background-position: 0 -3895px; }
+.flag-icon-so {  background-position: 0 -3914px; }
+.flag-icon-sr {  background-position: 0 -3933px; }
+.flag-icon-ss {  background-position: 0 -3952px; }
+.flag-icon-st {  background-position: 0 -3971px; }
+.flag-icon-sv {  background-position: 0 -3990px; }
+.flag-icon-sx {  background-position: 0 -4009px; }
+.flag-icon-sy {  background-position: 0 -4028px; }
+.flag-icon-sz {  background-position: 0 -4047px; }
+.flag-icon-tc {  background-position: 0 -4066px; }
+.flag-icon-td {  background-position: 0 -4085px; }
+.flag-icon-tf {  background-position: 0 -4104px; }
+.flag-icon-tg {  background-position: 0 -4123px; }
+.flag-icon-th {  background-position: 0 -4142px; }
+.flag-icon-tj {  background-position: 0 -4161px; }
+.flag-icon-tk {  background-position: 0 -4180px; }
+.flag-icon-tl {  background-position: 0 -4199px; }
+.flag-icon-tm {  background-position: 0 -4218px; }
+.flag-icon-tn {  background-position: 0 -4237px; }
+.flag-icon-to {  background-position: 0 -4256px; }
+.flag-icon-tr {  background-position: 0 -4275px; }
+.flag-icon-tt {  background-position: 0 -4294px; }
+.flag-icon-tv {  background-position: 0 -4313px; }
+.flag-icon-tw {  background-position: 0 -4332px; }
+.flag-icon-tz {  background-position: 0 -4351px; }
+.flag-icon-ua {  background-position: 0 -4370px; }
+.flag-icon-ug {  background-position: 0 -4389px; }
+.flag-icon-um {  background-position: 0 -4408px; }
+.flag-icon-usd {  background-position: 0 -4427px; }
+.flag-icon-uy {  background-position: 0 -4446px; }
+.flag-icon-uz {  background-position: 0 -4465px; }
+.flag-icon-va {  background-position: 0 -4484px; }
+.flag-icon-vc {  background-position: 0 -4503px; }
+.flag-icon-ve {  background-position: 0 -4522px; }
+.flag-icon-vg {  background-position: 0 -4541px; }
+.flag-icon-vi {  background-position: 0 -4560px; }
+.flag-icon-vn {  background-position: 0 -4579px; }
+.flag-icon-vu {  background-position: 0 -4598px; }
+.flag-icon-wf {  background-position: 0 -4617px; }
+.flag-icon-ws {  background-position: 0 -4636px; }
+.flag-icon-ye {  background-position: 0 -4655px; }
+.flag-icon-yt {  background-position: 0 -4674px; }
+.flag-icon-za {  background-position: 0 -4693px; }
+.flag-icon-zm {  background-position: 0 -4712px; }
+.flag-icon-zw {  background-position: 0 -4731px; }
+
+.row-ecalendar-head {
+    color: #5d5d5d;
+    border-bottom: 1px solid #001d35;
+    padding: 14px 0;
+    text-transform: uppercase;
+    font-size:11px;
+    font-weight:700;
+    display:table;
+    width:100%;
+}
+.row-ecalendar .col-ecalendar {
+    padding: 0 7px;
+    width: 10%;
+    vertical-align:top;
+    display: table-cell;
+    text-align:center;
+}
+.row-ecalendar .col-ecalendar.col-event {
+    width:40%;
+    text-align: left;
+}   
+.row-ecalendar .col-ecalendar.col-currency {
+    white-space:nowrap;
+}
+.row-ecalendar-body {
+    color: #5d5d5d;
+    border-bottom: 1px solid #cfcfcf;
+    padding: 14px 0;
+    font-size:14px;
+    font-weight:300;
+    display:table;
+    width:100%;
+}
+.row-ecalendar-body:hover {
+    background:rgba(250,209,29,0.3);
+    cursor:pointer;
+}
+.row-ecalendar-body .flag-icon {
+    margin-right:3px;
+}
+.row-ecalendar-body .col-importace svg {
+    width: 20px;
+    margin-top:-4px;
+    display: inline-block;
+    vertical-align: text-bottom;
+}
+.collapse-content {
+    background:#f4f4f4;
+    width:100%;
+}
+.collapse-content .col-detail-results {
+    display:table-cell;
+    vertical-align:middle;
+    width:30%;
+    padding:15px;
+    border-right:1px solid #ccc;
+}
+.collapse-content .col-detail-results .col-detail-arrow {
+    width:40px;
+    display:block;
+    margin:0 auto 30px;
+}
+.collapse-content .col-detail-results .row-ecalendar {
+    display:table;
+    table-layout:fixed;
+    width:100%;
+}
+.collapse-content .col-detail-results .col-ecalendar {
+    display:table-cell;
+    padding:0 10px;
+}
+.collapse-content .col-detail-results .col-ecalendar .col-detail-head {
+    font-size:10px;
+    font-weight:700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #444;
+}
+.collapse-content .col-detail-results .col-ecalendar .col-detail-result {
+    font-size: 20px;
+    font-weight:300;
+    color: #5e5e5e;
+}
+.collapse-content .col-detail-results .col-ecalendar .col-detail-result .detail-actual-up {
+    color:#29a755;
+}
+.collapse-content .col-detail-results .col-ecalendar .col-detail-result .detail-actual-down {
+    color:#ea1c1c;
+}
+.collapse-content .col-detail-results .btn {
+    display:table;
+    margin:20px auto 0;
+}
+.collapse-content .col-detail-details {
+    display:table-cell;
+    vertical-align:middle;
+    width:70%;
+    padding:15px;
+}
+
+.collapse-content .col-detail-details .row-ecalendar {
+    display:table;
+    table-layout:fixed;
+    width:100%;
+}
+.collapse-content .col-detail-details .col-ecalendar {
+    display:table-cell;
+    padding:0 5px;
+    text-align:left;
+}
+.collapse-content .col-detail-details .col-ecalendar .col-detail-head {
+    font-size:13px;
+    font-weight:700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: #00b7f1;
+}
+.collapse-content .col-detail-details .col-ecalendar .col-detail-detail {
+    font-size: 11px;
+    color: #9e9e9e;
+}
+
+@media screen and (max-width: 768px){
+    .collapse-content .col-detail-details .col-ecalendar {
+        display:block;
+        padding:0 0 10px;
+        width:100%;
+    }
+    .collapse-content .col-detail-results {
+        display:block;
+        width:100%;
+        border-right:0;
+        border-bottom: 1px solid #ccc;
+    }
+    .row-ecalendar .col-ecalendar {
+        width:12%;
+    }
+    .row-ecalendar .col-ecalendar.col-event {
+        width:28%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .row-ecalendar .col-ecalendar {
+        padding:0 2px;
+    }
+    .row-ecalendar-head {
+        font-size:9px;
+    }
+    .row-ecalendar-body {
+        font-size:11px;
+    }
+}
+
+@media screen and (max-width: 480px){   
+    .section-calendar .time-block {
+        display:block;
+        margin-bottom:10px;
+    }
+    .row-ecalendar .col-ecalendar.col-currency span {
+        display:none;
+    }
+    .row-ecalendar .col-ecalendar {
+        width:15%;
+    }
+    .row-ecalendar .col-ecalendar.col-event {
+        width:25%;
+    }
+    .row-ecalendar .col-ecalendar.col-importace {
+        display:none;
+    }
+}
+
+.calendar-filter input[type="checkbox"] {
+    visibility: hidden;
+    position: absolute;
+}
+input[type="checkbox"] + label::before, input[type="radio"] + label::before {
+    content: "";
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+    margin: 0 12px -13px -29px;
+    background-image: url(../images/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+}
+input[type="checkbox"]:checked + label::before {
+    background-position: -17px 0px;
+}
+
+.fade-body-enter-active, .fade-body-leave-active {
+    overflow-y: hidden;
+    max-height: 222px;
+
+    transition-property: all;
+    transition-duration: .5s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+}
+
+.fade-body-enter, .fade-body-leave-to {
+    max-height: 0;
+}
