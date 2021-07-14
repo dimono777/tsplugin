@@ -1,5 +1,4 @@
 <?php
-echo 123123;
 /*
 Plugin Name: TraderSoft
 Plugin URI: https://www.tradersoft.com
