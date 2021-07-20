@@ -9,6 +9,7 @@ Version: 0.3.65
 Author: Tradersoft
 Author URI: https://www.tradersoft.com
 License: GPL2
+GitHub Plugin URI: dimono777/tsplugin
 GitHub Plugin URI: https://github.com/dimono777/tsplugin
  
     Copyright 2017 Tradersoft
